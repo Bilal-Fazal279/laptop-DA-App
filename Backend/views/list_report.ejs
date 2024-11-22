@@ -1,0 +1,89 @@
+<%- include("includes/head.ejs") %>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <div class="breadcrumb">
+                <a href="#">Home > </a> 
+                <a href="#">Reports > </a>  
+                <a href="#">New</a> 
+            </div>
+            <div class="menu">
+                <a href="#" class="active">HOME</a>
+                <a href="#" class="highlight">REPORTS</a>
+                <a href="#">BILLING</a>
+                <a href="#">PLAYERS</a>
+                <a href="#">WAGERS</a>
+                <a href="#">MORE</a>
+            </div>
+        </nav>
+
+        <h1>Player Activity</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="day">Day</button>
+            <button class="tab-btn" data-tab="week">Week</button>
+            <button class="tab-btn" data-tab="month">Month</button>
+        </div>
+        <div class="table-container">
+        <table class="data-table">
+            <tr class="table-header">
+                <th class="header-cell">From</th>
+                <th class="header-cell">To</th>
+                <th class="header-cell">D_A_No</th>
+                <th class="header-cell">sentDate</th>
+                <th class="header-cell">vehicleNo</th>
+                <th class="header-cell">driverName</th>
+                <th class="header-cell">referenceSubject</th>
+                <th class="header-cell">itemSerialNumber</th>
+                <th class="header-cell">itemCode</th>
+                <th class="header-cell">itemDescription</th>
+                <th class="header-cell">PONo</th>
+                <th class="header-cell">unit</th>
+                <th class="header-cell">quantity</th>
+                <th class="header-cell">station</th>
+                <th class="header-cell">itemValue</th>
+                <th class="header-cell">senderPno/Packed By</th>
+                <th class="header-cell">senderName/Packed By Name</th>
+                <th class="header-cell">packDate</th>
+                <th class="header-cell">receiverName </th>
+                <th class="header-cell">receiverPno</th>
+            </tr>
+            <div class="table-body">
+                <% playerData.forEach(player => { %>
+                    <tr class="table-row">
+                        <td class="cell"><%= player.sentFrom %></td>
+                        <td class="cell"><%= player.sentTo %></td>
+                        <td class="cell"><%= player.D_A_No %></td>
+                        <!-- <td class="cell"><%= player.sentDate%></td> -->
+                        <td class="cell">
+                            <%= new Date(player.sentDate).toLocaleDateString('en-GB') %>
+                        </td>
+                        <td class="cell"><%= player.vehicleNo %></td>
+                        <td class="cell"><%= player.driverName %></td>
+                        <td class="cell"><%= player.referenceSubject %></td>
+                        <td class="cell"><%= player.itemSerialNumber %></td>
+                        <td class="cell"><%= player.itemCode %></td>
+                        <td class="cell"><%= player.itemDescription %></td>
+                        <td class="cell"><%= player.PONo %></td>
+                        <td class="cell"><%= player.unit %></td>
+                        <td class="cell"><%= player.quantity %></td>
+                        <td class="cell"><%= player.station %></td>
+                        <td class="cell"><%= player.itemValue %></td>
+                        <td class="cell"><%= player.senderPno %></td>
+                        <td class="cell"><%= player.senderName %></td>
+                        <!-- <td class="cell"><%= player.packDate %></td> -->
+                        <td class="cell">
+                            <%= new Date(player.packDate).toLocaleDateString('en-GB') %>
+                        </td>
+                        <td class="cell"><%= player.receiverName %></td>
+                        <td class="cell"><%= player.receiverPno %></td>
+                    </tr>
+                <% }); %>
+            </div>
+        </table>
+    </div>
+    </div>
+    <!-- <script src="/script.js"></script> Link to your JavaScript file -->
+</body>
+</html>

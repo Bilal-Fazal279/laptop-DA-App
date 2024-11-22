@@ -1,0 +1,209 @@
+<%- include('includes/index_js.ejs') %>
+
+
+<%- include("includes/head_index.ejs") %>
+<body>
+    <div class="container">
+        <form action="http://localhost:8080/da/form" method="POST">
+        <div class="header">
+            <img alt="PARCO Logo" height="50"
+                src="/Images/parco-logo.jpeg"
+                width="100" />
+            <h1>
+                PAK-ARAB REFINERY LIMITED
+            </h1>
+            <h2>
+                DESPATCH ADVICE
+            </h2>
+        </div>
+        <div class="head_tables">
+            <div class="table1">
+                <table class="details">
+                    <tr>
+                        <th>From:</th>
+                        <td style="width: 30rem;"><input type="text" name="sentFrom" required placeholder="Enter From" class="input"></td>
+                        </tr> <tr>
+                        <th>To:</th>
+                        <td style="width: 30rem;"><input type="text" name="sentTo" required placeholder="Enter To." class="input"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table2">
+                <table class="details">
+                    <tr>
+                        <th colspan="1">
+                            D.A. No:
+                        </th>
+                        <td colspan="2">
+                            <input type="text" name="D_A_No" required placeholder="DA Number" class="input">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Date:
+                        </th>
+                        <td>
+                            <input type="date" name="sentDate" required name="sent_date" id="sent_date" style="height: 30px;
+                            width: 100%;
+                            border: none; color">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Vehicle No:
+                        </th>
+                        <td>
+                            <input type="text" name="vehicleNo" required placeholder="eg. SA-2647" class="input">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Driver:
+                        </th>
+                        <td>
+                            <input type="text" name="driverName" required placeholder="eg. Noor Mustafa" class="input">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <span class="table3">
+            <table class="details">
+                <tr>
+                    <th style="width: 100px;">
+                        Reference:
+                    </th>
+                    <td colspan="3">
+                        <input type="text" name="referenceSubject" placeholder="eg. Tool Boxes" class="input">
+                    </td>
+                </tr>
+            </table>
+        </span>
+    
+        <span class="table4">
+            <table class="details" id="detailsTable">
+                <tr>
+                    <th>S. No.</th>
+                    <th>ITEM CODE</th>
+                    <th>DESCRIPTION</th>
+                    <th>P.O / INDENT NO.</th>
+                    <th>UNIT</th>
+                    <th>QTY</th>
+                    <th>STATION</th>
+                    <th>AMOUNT (Rs.)</th>
+                </tr>
+                <tr>
+                    <td><input type="text" required name="itemSerialNumber" placeholder="Serial Number. eg. 1" class="input"></td>
+                    <td><input type="text" name="itemCode" placeholder="Item Code(if have)" class="input"></td>
+                    <td><input type="text" name="itemDescription" required placeholder="eg. Anti Freeze Coolant" class="input"></td>
+                    <td><input type="text" name="PONo" placeholder="eg. P.O / INDENT NO.(if have)" class="input"></td>
+                    <td><input type="text" name="unit" required placeholder="eg.Unit EA" class="input"></td>
+                    <td><input type="text" name="quantity" required placeholder="eg.quantity 100" class="input"></td>
+                    <td><input type="text" name="station" placeholder="eg.Station PS-3" class="input"></td>
+                    <td><input type="text" name="itemValue" placeholder="eg.Item Value 10lakh" class="input"></td>
+                    <td class="add-row" onclick="addRow(this)">+</td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right;">TOTAL</td>
+                    <td></td>
+                </tr>
+            </table>
+        </span>
+        <div class="table5">
+            <div class="signature">
+                    <label>
+                          Packed / Checked by: 
+                    </label>
+                    <hr class="hr1">
+                     <img src="./Assets/Images/signInPng.png" alt="sign-img" width="50px" class="signImg">
+                    <label>
+                          P. No:  
+                    </label>
+                    <input type="text" name="senderPno" required placeholder="5299" class="line  PNo" />
+            </div>
+            <hr class="hr2">
+            <div class="signature">
+                    <label>
+                         In-charge: 
+                    </label>
+                    <input type="text" placeholder="Ahmed M. Khan" class="line" />
+                    <label>
+                          P. No:  
+                    </label>
+                    <input type="text" placeholder="5299" class="line  PNo" />
+            </div>
+            <div class="signature">
+                    <label>
+                         Name: 
+                    </label>
+                    <input type="text" name="senderName" required placeholder="Ahmed M. Khan" class="line" />
+                    <label>
+                          Date:  
+                    </label>
+                    <input type="date" name="packDate" required />
+            </div>
+            <div class="signature">
+                    <label>
+                          Name: 
+                    </label>
+                    <input type="text" placeholder="Ahmed M Khan" class="line" />
+                    <label>
+                          Date: 
+                    </label>
+                    <input type="date"  />
+            </div>
+        </div>
+        <div class="footer">
+            <h2 class="ack">
+                ACKNOWLEDGEMENT
+            </h2>
+            <p>
+                I confirm receipt of the above mentioned material(s) as per this D.A. Without any damage
+            </p>
+        <div class="footer_sign">
+        <div class="signature">
+                <label >
+                    Signature:
+                </label>
+                <hr class="hr1">
+                <img src="./Assets/Images/signInPng.png" alt="Sign" width="50px" class="signImg2">
+                <label>
+                    Receiving Date:
+                </label>
+                <input type="date"  />
+        </div>
+        <div class="signature">
+                <label>
+                    Receiver's Name:
+                </label>
+                <input type="text" name="receiverName" placeholder="Bilal Fazal" />
+                <label>
+                    P. No:
+                </label>
+                <input type="text" name="receiverPno" placeholder="6101" class="line PNo" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+        <!-- <div class="signature">
+            <div>
+                <label>
+                    Receiver's CNIC No:
+                </label>
+                <input type="text" value="" />
+            </div>
+        </div> -->
+        
+            <p>
+                Please return back this D.A. To In-charge Warehouse
+            </p>
+    </div>
+    </div>
+    <!-- Java script code start here  -->
+    <!-- <script src="./Assets/JS/app.js"></script> -->
+</body>
+
+</html>

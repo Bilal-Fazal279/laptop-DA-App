@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="http://localhost:8080/">
+    <title>
+        Despatch Advice
+    </title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #b1acac;
+}
+.container {
+    width: 80%;
+    background-color: #e1e2e4;
+    padding: 20px;
+    border: 1px solid #000;
+}
+.header {
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer{
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+}
+.header img {
+    width: 100px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+.details, .acknowledgement {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.input{
+    width: 95%;
+    height: 30px;
+    /* padding: 8px; */
+    text-align: left;
+    border: none;
+    background-color: #e1e2e4;
+    
+}
+
+input:focus-visible{
+    outline: #9E9E9E;
+}
+input:focus{
+    background-color: #add8e666;
+}
+input:not(:placeholder-shown){
+    /* background-color: rgb(32 178 171 / 19%); */
+    font-size: 20px;
+    color: #03A9F4;
+    font-weight: 700;
+}
+.details th, .details td, .acknowledgement th, .acknowledgement td{
+    border: 1px solid #000;
+    /* padding: 8px; */
+    text-align: left;
+}
+.details th, .acknowledgement th {
+    background-color: #f0f0f0;
+}
+.signature {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.signature div {
+    width: 45%;
+}
+.signature input {
+  height: 30px;
+}
+.head_tables{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.table1{
+    margin: 0px 10px;
+}
+
+/* testing code  */
+.table4 {
+    width: 100%;
+    border-collapse:collapse;
+}
+.details th, .details td {
+    /* border: 1px solid #000; */
+    /* padding: 8px; */
+    text-align: center;
+}
+
+.add-row {
+    display: none;
+    cursor: pointer;
+    color: blue;
+    font-weight: bold;
+}
+tr:hover .add-row {
+    display: inline;
+    position: absolute;
+    /* right; */
+}
+.table5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for testing */
+
+.table5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.line {
+    width: 150px; /* Adjust input width */
+    /* border: 1px solid black; */
+    height: 30px;
+    background-color: #e1e2e4;
+    /* margin-left: 5px; Space between label and input */
+}
+label {
+    display: inline-block;
+    margin-right: 5px; /* Space between label and input */
+}
+
+.PNo {
+    width: 100px;
+}
+.ack{
+    background-color: #9E9E9E;
+    border: 2px solid black;
+    margin-top: 0px;
+}
+
+.footer_sign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer_sign .signature {
+    width: calc(60% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.hr1{
+    width: 25%;
+    
+}
+.hr2{
+    position: absolute;
+    width: 8%;
+    transform: rotate(90deg);
+    left: 37rem;
+}
+.signImg{
+    position: absolute;
+    left: 25%;
+}
+.signImg2{
+    position: absolute;
+    left: 40%;
+}
+
+</style>
+
+    <!-- <link rel="stylesheet" href="./includes/Assets/CSS/style.css"> -->
+    <!-- <script src="./includes/Assets/JS/app.js"></script> -->
+</head>

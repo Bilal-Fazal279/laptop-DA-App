@@ -1,0 +1,23 @@
+<script>
+  function addRow(element) {
+    // Find the current row
+    const currentRow = element.parentElement;
+
+    // Create a new row
+    const newRow = document.createElement("tr");
+    newRow.innerHTML = `
+        <td><input type="text" required name="itemSerialNumber" placeholder="Serial Number. eg. 1" class="input"></td>
+        <td><input type="text" name="itemCode" placeholder="Item Code(if have)" class="input"></td>
+        <td><input type="text" name="itemDescription" required placeholder="eg. Anti Freeze Coolant" class="input"></td>
+        <td><input type="text" name="PONo" placeholder="eg. P.O / INDENT NO.(if have)" class="input"></td>
+        <td><input type="text" name="unit" required placeholder="eg.Unit EA" class="input"></td>
+        <td><input type="text" name="quantity" required placeholder="eg.quantity 100" class="input"></td>
+        <td><input type="text" name="station" placeholder="eg.Station PS-3" class="input"></td>
+        <td><input type="text" name="itemValue" placeholder="eg.Item Value 10lakh" class="input"></td>
+        <td class="add-row" onclick="addRow(this)">+</td>
+    `;
+
+    // Insert the new row after the current row
+    currentRow.parentNode.insertBefore(newRow, currentRow.nextSibling);
+  }
+</script>
