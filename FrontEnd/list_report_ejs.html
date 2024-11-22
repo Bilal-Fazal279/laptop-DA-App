@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA Activity Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+     <!-- <style>
+        :root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #242424;
+    --highlight: #ffeb3b;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+}
+
+.container {
+    padding: 20px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.menu a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.menu a.highlight {
+    color: var(--highlight);
+}
+
+h1 {
+    color: var(--highlight);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tab-btn.active {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--highlight);
+}
+
+.data-table {
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 15px;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-cell {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.table-row:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cell {
+    font-size: 14px;
+}
+
+.positive {
+    color: #4caf50;
+}
+
+.negative {
+    color: #f44336;
+}
+     </style> -->
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <div class="breadcrumb">
+                <a href="#">Home > </a> 
+                <a href="#">Reports > </a>  
+                <a href="#">New</a> 
+            </div>
+            <div class="menu">
+                <a href="#" class="active">HOME</a>
+                <a href="#" class="highlight">REPORTS</a>
+                <a href="#">BILLING</a>
+                <a href="#">PLAYERS</a>
+                <a href="#">WAGERS</a>
+                <a href="#">MORE</a>
+            </div>
+        </nav>
+
+        <h1>Player activity</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="day">Day</button>
+            <button class="tab-btn" data-tab="week">Week</button>
+            <button class="tab-btn" data-tab="month">Month</button>
+        </div>
+        <div class="table-container">
+            <table class="data-table">
+            <tr class="table-header">
+                <th class="header-cell">From</th>
+                <th class="header-cell">To</th>
+                <th class="header-cell">D_A_No</th>
+                <th class="header-cell">sentDate</th>
+                <th class="header-cell">vehicleNo</th>
+                <th class="header-cell">driverName</th>
+                <th class="header-cell">referenceSubject</th>
+                <th class="header-cell">itemSerialNumber</th>
+                <th class="header-cell">itemCode</th>
+                <th class="header-cell">itemDescription</th>
+                <th class="header-cell">PONo</th>
+                <th class="header-cell">unit</th>
+                <th class="header-cell">quantity</th>
+                <th class="header-cell">station</th>
+                <th class="header-cell">itemValue</th>
+                <th class="header-cell">senderPno/Packed By</th>
+                <th class="header-cell">senderName/Packed By Name</th>
+                <th class="header-cell">packDate</th>
+                <th class="header-cell">receiverName </th>
+                <th class="header-cell">receiverPno</th>
+            </tr>
+            <tr class="table-body table-row">
+                <!-- <div class="table-row"> -->
+                <td class="cell">Bilal</td>
+                <td class="cell">Sam</td>
+                <td class="cell">S&T Maint/PG/92/24</td>
+                <td class="cell">15-11-2024</td>
+                <td class="cell">SA-2647</td>
+                <td class="cell">Dost Ali</td>
+                <td class="cell">Tools</td>
+                <td class="cell">1</td>
+                <td class="cell">NULL</td>
+                <td class="cell">Tool Box</td>
+                <td class="cell">NULL</td>
+                <td class="cell">EA</td>
+                <td class="cell">03</td>
+                <td class="cell">NULL</td>
+                <td class="cell">NULL</td>
+                <td class="cell">6101</td>
+                <td class="cell">Bilal Fazal</td>
+                <td class="cell">15-11-2024</td>
+                <td class="cell">NULL</td>
+                <td class="cell">NULL</td>
+            <!-- </div> -->
+                <!-- Data rows will be populated by JavaScript -->
+            </tr>
+        </table>
+    </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        // Sample data
+const playerData = [
+    {
+        user: "Matt A. Donovan",
+        wagers: 14200,
+        wl: -1456,
+        balance: 4200,
+        cashIn: 2000,
+        cashOut: 0,
+        numWagers: 250,
+        avgW: 42,
+        sharp: false,
+        lastActive: "07-JAN-16:24",
+        memberFor: "100 weeks",
+        mobileRate: "0/100%"
+    },
+    // Add more sample data as needed
+];
+
+// Function to format currency
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0
+    }).format(amount);
+}
+
+// Function to create table rows
+function createTableRows(data) {
+    // const tableBody = document.querySelector('.table-body');
+    tableBody.innerHTML = '';
+
+    data.forEach(player => {
+        const row = document.createElement('div');
+        row.className = 'table-row';
+        
+        row.innerHTML = `
+            <div class="cell">${player.user}</div>
+            <div class="cell">${formatCurrency(player.wagers)}</div>
+            <div class="cell ${player.wl >= 0 ? 'positive' : 'negative'}">${formatCurrency(player.wl)}</div>
+            <div class="cell">${formatCurrency(player.balance)}</div>
+            <div class="cell">${formatCurrency(player.cashIn)}</div>
+            <div class="cell">${formatCurrency(player.cashOut)}</div>
+            <div class="cell">${player.numWagers}</div>
+            <div class="cell">${formatCurrency(player.avgW)}</div>
+            <div class="cell">${player.sharp ? '✓' : ''}</div>
+            <div class="cell">${player.lastActive}</div>
+            <div class="cell">${player.memberFor}</div>
+            <div class="cell">${player.mobileRate}</div>
+        `;
+
+        tableBody.appendChild(row);
+    });
+}
+
+// Tab functionality
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Here you would typically fetch and display different data based on the selected tab
+        // For this example, we'll just use the same data
+        createTableRows(playerData);
+    });
+});
+
+// Initial load
+createTableRows(playerData);
+     </script>
+</body>
+</html>

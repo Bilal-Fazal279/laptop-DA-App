@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: black;
+      }
+
+      fieldset {
+        max-width: 36rem;
+        min-height: 23rem;
+        margin: 4rem auto;
+        background-color: rgba(133, 187, 232, 0.991);
+        border: 1px solid;
+        border-radius: 15px;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: auto;
+      }
+
+      h1 {
+        color: gold;
+        font-size: 40px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      form input {
+        height: 30px;
+        /* margin: 20px auto; */
+        max-width: 500px;
+        border: 1px solid burlywood;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      input:focus-visible {
+        outline-color: #e9de7ac7;
+      }
+      input::placeholder{
+        padding-left: 5px;
+      }
+      form label {
+        text-align: left;
+        margin-bottom: 10px;
+        color: #0c668a;
+      }
+
+      button {
+        height: 40px;
+        width: 100px;
+        margin: auto;
+        font-size: 20px;
+        border-radius: 4px;
+        margin-top: 2rem;
+        border: 1px solid burlywood;
+        background-color: #0c668a;
+        color: burlywood;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <fieldset>
+      <h1>REGISTER</h1>
+      <div class="container">
+        <form action="/da/register" method="post">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email"
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your Password"
+          />
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </fieldset>
+  </body>
+</html>
