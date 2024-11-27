@@ -1,4 +1,4 @@
-DA Recor at Main Gate Month wise.
+DA Record at Main Gate Month wise.
 
 Dec-2023 -> 82 pages
 Nov-2023 -> 78 pages
@@ -12,3 +12,6 @@ April-2024 -> 76 pages
 March-2024 -> 84 pages 
 Feb-2024 -> 70 pages
 January-2024 -> 97 pages
+
+
+Page yield for lazer jet printer is about 2500-3000 pages.
